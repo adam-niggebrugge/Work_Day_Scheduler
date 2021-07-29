@@ -62,8 +62,8 @@ function colorCodeWorkHours(){
     for(var j = (present - 1); j >= 0; j--){
         $('#activity'+j).addClass('past');
         //using jquery to grab element and change the inner text
-        // $('#activity'+j).text("The time has passed.").prop('disabled', true);
-        // $('#save-Activity'+j).prop('disabled', true);
+        $('#activity'+j).text("The time has passed.").prop('disabled', true);
+        $('#save-Activity'+j).prop('disabled', true);
     }
     //assumes all cases going forward, but would miss 0 index while looping
     //checks if 0, if true paint all
