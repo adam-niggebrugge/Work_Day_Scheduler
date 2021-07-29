@@ -6,8 +6,8 @@ var timeBlockEl = $('#timeSchedule');
 var currentDayEl = $('#currentDay');
 var rightNow = moment().format('MMM DD, YYYY [at] hh:mm a');
 //object to hold and render activities
-debugger
-
+//debugger
+//var trackedTasks = [];  NOT CLEAR WHY BEING DECLARED HERE CAUSES ERRORS
 let workTime = 16;
 let merdian = 'am';
 let startTime = 7;
@@ -91,7 +91,6 @@ function init(){
     };
 
     var taskReturner = JSON.parse(localStorage.getItem("taskTracker"))
-    debugger;
     
     //check there are items in local storage
     if(taskReturner !== null){
