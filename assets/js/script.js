@@ -6,11 +6,11 @@ var timeBlockEl = $('#timeSchedule');
 var currentDayEl = $('#currentDay');
 var rightNow = moment().format('MMM DD, YYYY [at] hh:mm a');
 //object to hold and render activities
-//debugger
-//var trackedTasks = [];  NOT CLEAR WHY BEING DECLARED HERE CAUSES ERRORS
-let workTime = 16;
+debugger
+// var trackedTasks = []; // NOT CLEAR WHY BEING DECLARED HERE CAUSES ERRORS
+let workTime = 8;
 let merdian = 'am';
-let startTime = 7;
+let startTime = 8;
 
 function SaveActivity (clickedButton){
 
@@ -62,7 +62,7 @@ function colorCodeWorkHours(){
     for(var j = (present - 1); j >= 0; j--){
         $('#activity'+j).addClass('past');
         //using jquery to grab element and change the inner text
-        $('#activity'+j).text("The time has passed.").prop('disabled', true);
+        $('#activity'+j).append(" ... The time for this has passed.").prop('disabled', true);
         $('#save-Activity'+j).prop('disabled', true);
     }
     //assumes all cases going forward, but would miss 0 index while looping
