@@ -117,7 +117,7 @@ function setActivities(){
     //cycle through local stored items
         for(var j = 0; j < trackedTasks.length; j++){
             //cycle through activities till times match, then use that 
-            for(var i = 0; i < workTime; i++){
+            for(var i = 0; i <= workTime; i++){
                 if($('#time'+i)[0].innerHTML == trackedTasks[j].hour){
                     $('#activity'+i).val(trackedTasks[j].activity);
                 }
